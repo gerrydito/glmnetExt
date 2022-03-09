@@ -21,9 +21,11 @@ on to the \code{predict} method for \code{glmnet} objects.
 This function makes it easier to use the results of cross-validation to make a prediction.
 }
 \examples{
+\dontrun{
 data("leukemia", package = "varbvs")
 X <- leukemia$x
 y <- leukemia$y
 mod <- cv.glmnet.all(x = X, y = y, family = "binomial", type.measure = "deviance")
 predict(mod, X)
+}
 }

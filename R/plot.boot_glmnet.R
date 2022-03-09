@@ -2,6 +2,7 @@
 #' @param x fitted 'cv.glmnet.all'
 #' @param \dots Not used. Other arguments to plot.
 #' @examples
+#' \dontrun{
 #' data("leukemia", package = "varbvs")
 #' X <- leukemia$x
 #' y <- leukemia$y
@@ -14,6 +15,7 @@
 #'   lambda = info_model$lambda, B = 50
 #' )
 #' plot(mod_boot)
+#' }
 #' @importFrom ggplot2 geom_vline aes element_text scale_y_continuous scale_x_continuous ggtitle xlab theme scale_color_manual
 #' @import ggpubr
 #' @import broom

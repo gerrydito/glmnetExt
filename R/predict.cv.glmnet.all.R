@@ -5,11 +5,13 @@
 #' @return The object returned depends on the \dots{} argument which is passed.
 #' on to the \code{predict} method for \code{glmnet} objects.
 #' @examples
+#' \dontrun{
 #' data("leukemia", package = "varbvs")
 #' X <- leukemia$x
 #' y <- leukemia$y
 #' mod <- cv.glmnet.all(x = X, y = y, family = "binomial", type.measure = "deviance")
 #' predict(mod, X)
+#' }
 #' @importFrom stats predict
 #' @importFrom glmnet predict.glmnet
 #' @rdname predict.cv.glmnet.all

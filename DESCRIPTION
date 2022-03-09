@@ -1,15 +1,14 @@
 Package: glmnetExt
 Type: Package
-Title: glmnetExt: Extension of glmnet
+Title: glmnetExt: Extension of 'Glmnet'
 Version: 0.1.0
-Author: person("Gerry", "Alfa Dito", , "gerryalfadito@gmail.com", role = c("aut", "cre"))
-Maintainer: The package maintainer <gerryalfadito@gmail.com>
-Description: Provides a computation for importance measure and Confidence Interval using bootstap; method for cross-validating the alpha parameter.
+Authors@R: person(given=c("Gerry","Alfa Dito"),email= "gerryalfadito@gmail.com", role = c("aut", "cre"))
+Maintainer: Gerry Alfa Dito <gerryalfadito@gmail.com>
+Description: Provides a computation for importance measure and Confidence Interval using bootstrap; method for cross-validating the alpha parameter.
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.1.2
 Imports: 
-    varbvs(>= 2.5.16),
     stats(>= 4.1.2),
     broom(>= 0.7.12),
     future(>= 1.24.0),
@@ -25,3 +24,5 @@ Depends:
     R(>= 4.1.0),
     glmnet(>= 4.1.3),
     data.table(>= 1.14.2)
+Suggests: 
+    varbvs

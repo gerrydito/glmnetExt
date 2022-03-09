@@ -2,7 +2,7 @@
 % Please edit documentation in R/boot_glmnet.R
 \name{boot_glmnet}
 \alias{boot_glmnet}
-\title{Compute Bootstrap Confidence Interval and importance measure of glmnet coeficients}
+\title{Compute Bootstrap Confidence Interval and importance measure of glmnet coefficients}
 \usage{
 boot_glmnet(
   X,
@@ -43,12 +43,13 @@ an object of class \code{"cv.glmnet.all"} is returned, which is a list
 with the ingredients of the cross-validation fit.
 \item{model}{a fitted \code{glmnet} object for the full data.}
 \item{boot_result}{table contains importance measure, bootstrap Percentile CI, bootstrap bsa CI,bootstrap standard deviation and bootstrap mean }
-\item{boot_resample}{All Boostrap Resampling data}
+\item{boot_resample}{All Bootstrap Resampling data}
 }
 \description{
-Compute Bootstrap Confidence Interval and importance measure of glmnet coeficients
+Compute Bootstrap Confidence Interval and importance measure of glmnet coefficients
 }
 \examples{
+\dontrun{
 data("leukemia", package = "varbvs")
 X <- leukemia$x
 y <- leukemia$y
@@ -63,6 +64,7 @@ mod_boot <- boot_glmnet(
   family = "binomial", alpha = info_model$alpha,
   lambda = info_model$lambda, B = 50
 )
+}
 }
 \references{
 Hansu Kim, Tae Hee Lee (2021) \emph{A robust elastic net via bootstrap method under sampling uncertainty for significance analysis of high-dimensional design problems, Knowledge-Based Systems,Vol. 225}

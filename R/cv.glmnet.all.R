@@ -11,11 +11,12 @@
 #' \item{type.measure}{loss to use for cross-validation}
 #' @seealso \code{glmnet::cv.glmnet}
 #' @examples
-#'
+#' \dontrun{
 #' data("leukemia",package = "varbvs")
 #' X=leukemia$x
 #' y=leukemia$y
 #' mod <- cv.glmnet.all(x=X,y=y,family="binomial",type.measure = "deviance")
+#' }
 #' @import glmnet
 #' @import data.table
 #' @import tidytable

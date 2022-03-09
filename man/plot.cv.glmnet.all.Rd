@@ -36,9 +36,11 @@ Plots the cross-validation contour.
 The labels are shown on the plot are several non-zero coefficients. Labels are only shown for the top five rankings based on a metric.
 }
 \examples{
+\dontrun{
 data("leukemia", package = "varbvs")
 X <- leukemia$x
 y <- leukemia$y
 mod1 <- cv.glmnet.all(x = X, y = y, family = "binomial", type.measure = "deviance")
 plot(mod1)
+}
 }

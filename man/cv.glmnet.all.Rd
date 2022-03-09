@@ -32,11 +32,12 @@ with the ingredients of the cross-validation fit.
 Does k-fold cross-validation for glmnet, produces a plot, and returns a value for alpha and lambda
 }
 \examples{
-
+\dontrun{
 data("leukemia",package = "varbvs")
 X=leukemia$x
 y=leukemia$y
 mod <- cv.glmnet.all(x=X,y=y,family="binomial",type.measure = "deviance")
+}
 }
 \seealso{
 \code{glmnet::cv.glmnet}

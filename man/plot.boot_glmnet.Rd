@@ -15,6 +15,7 @@
 Plots the bootstrap result.
 }
 \examples{
+\dontrun{
 data("leukemia", package = "varbvs")
 X <- leukemia$x
 y <- leukemia$y
@@ -27,4 +28,5 @@ mod_boot <- boot_glmnet(
   lambda = info_model$lambda, B = 50
 )
 plot(mod_boot)
+}
 }

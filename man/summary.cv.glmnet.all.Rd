@@ -15,9 +15,11 @@
 Print a summary of the results of cross-validation for a glmnet model.
 }
 \examples{
+\dontrun{
 data("leukemia", package = "varbvs")
 X <- leukemia$x
 y <- leukemia$y
 mod <- cv.glmnet.all(x = X, y = y, family = "binomial", type.measure = "deviance")
 summary(mod)
+}
 }

@@ -43,7 +43,7 @@ imp_variable <- function(x, left, right) {
   criteria <- !between.(0, left, right)
   imp <- abs(x) * criteria
 }
-#' Compute Bootstrap Confidence Interval and importance measure of glmnet coeficients
+#' Compute Bootstrap Confidence Interval and importance measure of glmnet coefficients
 #' @param X x matrix of predictor variables.See \code{glmnet} for more details.
 #' @param y y response variable. See \code{glmnet} for more details.
 #' @param B number of bootstrap replicates. The Default is 500.
@@ -58,9 +58,10 @@ imp_variable <- function(x, left, right) {
 #' with the ingredients of the cross-validation fit.
 #' \item{model}{a fitted \code{glmnet} object for the full data.}
 #' \item{boot_result}{table contains importance measure, bootstrap Percentile CI, bootstrap bsa CI,bootstrap standard deviation and bootstrap mean }
-#' \item{boot_resample}{All Boostrap Resampling data}
+#' \item{boot_resample}{All Bootstrap Resampling data}
 #' @references Hansu Kim, Tae Hee Lee (2021) \emph{A robust elastic net via bootstrap method under sampling uncertainty for significance analysis of high-dimensional design problems, Knowledge-Based Systems,Vol. 225}
 #' @examples
+#' \dontrun{
 #' data("leukemia", package = "varbvs")
 #' X <- leukemia$x
 #' y <- leukemia$y
@@ -75,6 +76,7 @@ imp_variable <- function(x, left, right) {
 #'   family = "binomial", alpha = info_model$alpha,
 #'   lambda = info_model$lambda, B = 50
 #' )
+#' }
 #' @import glmnet
 #' @import data.table
 #' @import tidyselect
